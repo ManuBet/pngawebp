@@ -1,0 +1,7 @@
+{
+  "name": "PixelMorph AI",
+  "description": "A world-class image format converter with AI-powered smart renaming and captioning.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
