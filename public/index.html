@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PNG a WebP - Conversor unitario y masivo</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero__content">
+        <p class="hero__eyebrow">Conversor local en tu navegador</p>
+        <h1>Convierte PNG a WebP en segundos</h1>
+        <p class="hero__subtitle">
+          Sube una imagen o un lote completo. Todo se procesa en tu navegador, sin
+          subir archivos a servidores.
+        </p>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="panel">
+        <h2>1. Selecciona tus PNG</h2>
+        <div class="upload">
+          <label class="upload__button">
+            Elegir archivos
+            <input id="file-input" type="file" accept="image/png" multiple />
+          </label>
+          <button id="clear-files" class="button" type="button" disabled>Limpiar selección</button>
+          <p id="file-help" class="upload__help">Puedes elegir uno o muchos archivos PNG.</p>
+        </div>
+        <div id="drop-zone" class="drop-zone" aria-label="Zona para soltar PNG">
+          <p>
+            Arrastra y suelta tus PNG aquí para convertirlos en lote.
+            <span>Se añadirán a la selección actual.</span>
+          </p>
+        </div>
+        <div id="file-list" class="file-list"></div>
+      </section>
+
+      <section class="panel">
+        <div class="panel__header">
+          <h2>2. Ajusta la calidad</h2>
+          <span id="quality-value">80%</span>
+        </div>
+        <input
+          id="quality-range"
+          class="range"
+          type="range"
+          min="40"
+          max="100"
+          value="80"
+        />
+        <p class="panel__hint">Más calidad = archivo más pesado. Ajusta según tu necesidad.</p>
+      </section>
+
+      <section class="panel">
+        <div class="panel__header">
+          <h2>3. Convierte y descarga</h2>
+          <div class="panel__actions">
+            <button id="convert-button" class="button button--primary" disabled>
+              Convertir
+            </button>
+            <button id="download-all" class="button" disabled>Descargar todo</button>
+          </div>
+        </div>
+        <div id="status" class="status" aria-live="polite">Selecciona archivos para comenzar.</div>
+        <div id="results" class="results"></div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>
+        Tus archivos no salen de tu dispositivo. El resultado depende del soporte
+        de tu navegador.
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
