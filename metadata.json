@@ -1,7 +1,6 @@
+
 {
-  "name": "PixelMorph AI",
-  "description": "A world-class image format converter with AI-powered smart renaming and captioning.",
-  "requestFramePermissions": [
-    "camera"
-  ]
+  "name": "PixelMorph WebP AI",
+  "description": "Convertidor inteligente de imágenes a WebP con optimización por IA.",
+  "requestFramePermissions": []
 }
